@@ -2,6 +2,9 @@
 import { useEffect, useState } from "react";
 import { Navbar } from "../components/dashboard/Navbar";
 import { Socket, io } from "socket.io-client";
+import { Leftbar } from "../components/chat/ChatHistory";
+import { VideoCall } from "../components/chat/VideoCall";
+import { ChatScreen } from "../components/chat/ChatScreen";
 
 export default function Chat() {
     const [connectedUsers, setConnectedUsers] = useState(0)
@@ -56,9 +59,11 @@ export default function Chat() {
     }, [])
 
     return (
-        <div className="h-screen max-h-screen w-full flex flex-col px-5">
-            <Navbar />
-            <div className="py-5 flex h-fit w-full">
+        <div className="h-screen max-h-screen w-full flex shrink-0">
+            <Leftbar />
+            <VideoCall />
+            <ChatScreen />
+            {/* <div className="py-5 flex h-fit w-full">
                 <h1 className="text-lg font-semibold">Connected users: {connectedUsers}</h1>
             </div>
             <div className="h-fit w-full flex justify-between items-center">
@@ -70,7 +75,7 @@ export default function Chat() {
 
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
