@@ -8,14 +8,14 @@ export function Navbar() {
     const [ isMenuOpen, setIsMenuOpen ] = useState(false)
     return (
         <>
-            <nav className="flex w-full items-center p-3 relative">
+            <nav className="flex w-full items-center p-3 relative shadow dark:shadow-white/20">
                 <div className="flex h-fit w-fit items-center dark:invert-100 shrink-0 ">
                     <Image 
                         src="/logo_lg.png"
                         alt="Logo"
                         width={120}
                         height={40}
-                        className="h-11 rounded-full w-auto"
+                        className="h-10 rounded-full w-auto"
                     />
                 </div>
                 <ul className={`${rubikIso.className} hidden md:flex w-full items-center justify-center gap-10`}>

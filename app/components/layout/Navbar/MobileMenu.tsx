@@ -16,7 +16,7 @@ type MobileMenuProps = {
 
 export function MobileMenu({ setTrigger }: MobileMenuProps) {
     return (
-        <nav className="h-screen md:hidden p-3 w-full absolute top-0 left-0 bg-white dark:bg-black">
+        <nav className="h-screen md:hidden p-3 w-full absolute top-0 left-0 bg-white dark:bg-black z-100">
             <div className={`w-full ${rubikIso.className} flex justify-end p-1`}>
                 <button onClick={() => setTrigger(prev => !prev)} className="text-4xl font-extrabold active:rotate-180 transition-all cursor-pointer ">X</button>
             </div>
