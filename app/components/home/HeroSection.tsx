@@ -14,21 +14,24 @@ export function HeroSection(){
         <div className="w-full flex flex-col justify-center items-center p-2 gap-5 py-7">
             <div className={`${londrinaOutline.className} relative`}>
                 <h1 className="text-7xl text-center font-semibold">TALK TO STRANGERS</h1>
-                <Image 
-                    src="/happy_fm.svg"
-                    alt="HAPPY-FACE"
-                    height={40}
-                    width={60}
-                    className="absolute -top-3 -rotate-z-12 left-4 h-12"
-                />
+                <div className="p-1 absolute -top-5 -rotate-z-12 left-3 rounded-full bg-purple-200 overflow-hidden">
+                    <Image 
+                        src="/izra.svg"
+                        alt="HAPPY-FACE"
+                        height={50}
+                        width={50}
+                    />
+                </div>
+                
+                <div className="p-1 absolute -top-4 rotate-3 right-0 rounded-full bg-pink-200 overflow-hidden">
+                    <Image 
+                        src="/mary.svg"
+                        alt="HAPPY-FACE"
+                        height={50}
+                        width={50}
+                    />
+                </div>
 
-                <Image 
-                    src="/happy_fm.svg"
-                    alt="HAPPY-FACE"
-                    height={40}
-                    width={60}
-                    className="absolute -top-4 rotate-3 right-0 h-16"
-                />
 
                 {/* <Image 
                     src="/happy_fm.svg"
@@ -38,22 +41,24 @@ export function HeroSection(){
                     className="absolute top-14 -rotate-12 -left-9 h-8"
                 /> */}
 
-                <Image 
-                    src="/happy_fm.svg"
-                    alt="HAPPY-FACE"
-                    height={40}
-                    width={50}
-                    className="absolute top-29 rotate-12 left-5 h-12"
-                />
+                <div className=" absolute top-29 rotate-12 left-5 rounded-full bg-red-300">
+                    <Image 
+                        src="/krishna-white.svg"
+                        alt="HAPPY-FACE"
+                        height={40}
+                        width={50}
+                    />
+                </div>
 
 
-                <Image 
-                    src="/happy_fm.svg"
-                    alt="HAPPY-FACE"
-                    height={40}
-                    width={120}
-                    className="absolute top-10 -rotate-6 left-36 h-10"
-                />
+                <div className="p-.5 absolute top-10 -rotate-12 right-30 rounded-full bg-green-200">
+                    <Image 
+                        src="/mathew.svg"
+                        alt="HAPPY-FACE"
+                        height={40}
+                        width={40}
+                    />
+                </div>
 
                 {/* <Image 
                     src="/happy_fm.svg"
