@@ -1,5 +1,8 @@
+import { AboutUs } from "./components/home/AboutUs";
+import { FAQ } from "./components/home/FAQ";
 import { FeatureBanner } from "./components/home/FeatureBanner";
 import { HeroSection } from "./components/home/HeroSection";
+import { Footer } from "./components/layout/Footer/Footer";
 import { Navbar } from "./components/layout/Navbar";
 
 export default function Home() {
@@ -8,6 +11,9 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <FeatureBanner />
+      <AboutUs />
+      <FAQ />
+      <Footer />
     </>
   );
 }

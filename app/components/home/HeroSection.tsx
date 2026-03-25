@@ -1,5 +1,5 @@
 "use client"
-import { Londrina_Outline, Rubik_Iso } from "next/font/google"
+import { Londrina_Outline } from "next/font/google"
 import { useState } from "react"
 import Image from "next/image"
 
@@ -71,7 +71,7 @@ export function HeroSection(){
             </div>
             <p className="text-center font-sans py-4 px-10">Use Omegle to get paired randomly with another person online to talk one-on-one</p>
 
-            <div className="w-4/5 h-12 flex items-center text-white overflow-hidden rounded-full p-1 bg-black relative">
+            <div className="w-4/5 h-12 flex items-center dark:invert text-white overflow-hidden rounded-full p-1 bg-black relative">
                 <button onClick={() => setButtonTitle('Video')} className={`z-10 h-full w-1/2 font-semibold font-sans text-lg rounded-full ${buttonTitle === 'Text' ? 'text-black' : 'text-white'}`}>
                     {buttonTitle === 'Text' ? buttonTitle : 'Text' }
                 </button>

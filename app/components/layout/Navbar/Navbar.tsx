@@ -8,7 +8,7 @@ export function Navbar() {
     const [ isMenuOpen, setIsMenuOpen ] = useState(false)
     return (
         <>
-            <nav className="flex w-full items-center p-3 relative shadow dark:shadow-white/20">
+            <nav className="flex w-full items-center p-3 sticky top-0 left-0 shadow dark:shadow-white/20 z-100 bg-white dark:bg-black">
                 <div className="flex h-fit w-fit items-center dark:invert-100 shrink-0 ">
                     <Image 
                         src="/logo_lg.png"
