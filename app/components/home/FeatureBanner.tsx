@@ -1,8 +1,9 @@
 "use client"
 import { CircleAlert, CircleUserRound, Globe, User, VideoIcon } from "lucide-react"
 import { motion } from "framer-motion"
+import { Variants } from "framer-motion";
 
-const marqueeVariants = {
+const marqueeVariants: Variants = {
   animate: {
     x: [0, -650],
     transition: {
