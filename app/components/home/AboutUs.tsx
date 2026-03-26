@@ -12,7 +12,7 @@ const londrinaOutline = Londrina_Outline({
 
 export function AboutUs(){
     return (
-        <section className="px-2 pt-2 pb-10 flex flex-col gap-3">
+        <section id="About" className="px-2 pt-2 pb-10 flex flex-col gap-3">
             <div className={`w-full flex items-center justify-center ${londrinaSolid.className}`}>
                 <h2 className="text-5xl hover:underline cursor-pointer">About Us</h2>
             </div>
