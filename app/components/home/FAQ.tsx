@@ -14,7 +14,7 @@ export function FAQ() {
     return (
         <section className="px-2 pt-2 pb-10 flex flex-col gap-3">
             <div className={`w-full flex items-center justify-center ${londrinaSolid.className}`}>
-                <h2 className="text-5xl">FAQ</h2>
+                <h2 className="text-5xl hover:underline cursor-pointer">FAQ</h2>
             </div>
             <div className="w-full flex flex-col p-1 gap-2">
                 {

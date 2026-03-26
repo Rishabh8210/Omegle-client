@@ -8,7 +8,7 @@ import { Navbar } from "./components/layout/Navbar";
 
 export default function Home() {
   return (
-    <>
+    <main className="md:hidden">
       <Navbar />
       <HeroSection />
       <FeatureBanner />
@@ -16,6 +16,6 @@ export default function Home() {
       <AboutUs />
       <FAQ />
       <Footer />
-    </>
+    </main>
   );
 }
