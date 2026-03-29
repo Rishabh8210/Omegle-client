@@ -21,7 +21,7 @@ export function FAQ() {
                     (Questions && Questions.length > 0) ? Questions.map((data, ind) => {
                         return (
                             <div key={ind} className="border-b border-dashed rounded p-2 drop-shadow gap-5 flex flex-col w-full">
-                                <div onClick={() => setFaqAccordian(faqAccordian === ind ? -1 : ind)} className="flex items-center gap-2">
+                                <div onClick={() => setFaqAccordian(faqAccordian === ind ? -1 : ind)} className="flex items-center justify-between gap-2">
                                     <p className="font-semibold font-sans">{data.question}</p>
                                     <div className="transition-all cursor-pointer">
                                         {faqAccordian !== ind ? <Plus height={24} width={30} strokeWidth={2.5} /> : <Minus height={24} width={30} strokeWidth={2.5} />}

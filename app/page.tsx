@@ -8,7 +8,7 @@ import { Navbar } from "./components/layout/Navbar";
 
 export default function Home() {
   return (
-    <main className="md:hidden">
+    <main className="md:hidden overflow-hidden">
       <Navbar />
       <HeroSection />
       <FeatureBanner />

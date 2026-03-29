@@ -23,7 +23,7 @@ export function MobileMenu({ setTrigger }: MobileMenuProps) {
             </div>
             <ul className={`w-full ${rubikIso.className} flex justify-center items-center py-16 flex-col gap-8`}>
                 <li className="text-5xl select-none active:underline active:text-6xl hover:cursor-pointer text-center font-semibold font-stretch-200% transition-all">
-                    <Link href={'/login'} className="">Login</Link>
+                    <Link href={'/signin'} className="">Login</Link>
                 </li>
                 <li onClick={() => setTrigger(prev => !prev)} className="text-5xl select-none active:underline active:text-6xl hover:cursor-pointer text-center font-semibold font-stretch-200% transition-all">
                     <Link href={'#Home'} className="">Home</Link>
