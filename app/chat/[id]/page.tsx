@@ -5,13 +5,7 @@ import { ReceiverMessageBar } from "@/app/components/chat/ReceiverMessageBar";
 import { SenderMessageBar } from "@/app/components/chat/SenderMessageBar";
 import { SendHorizonal } from "lucide-react";
 import { useState } from "react";
-
-interface Message {
-    senderId: string
-    receiverId: string
-    message: string
-}
-
+import { Message } from "@/app/types/ChatMessage";
 
 export default function Chats( ){
     const [ allMessages, setAllMessages ] = useState<Message[]>([])
@@ -19,7 +13,7 @@ export default function Chats( ){
     const [ message, setMessage ] = useState('')
 
     function sendMessage(){
-        allMessages.push({senderId: "1", receiverId: "3", message: message})
+        setAllMessages((prev) => [...prev, { senderId: "1", receiverId: "3", message: message }])
         setMessage('')
     }
 
@@ -27,8 +21,16 @@ export default function Chats( ){
         <section className="md:hidden h-screen max-h-screen flex flex-col justify-between w-full bg-white dark:bg-black">
             <Navbar />
             <div className="h-full overflow-y-auto overflow-x-hidden p-3 flex flex-col gap-5 bg-white/50 bg-blend-color-burn    bg-[url(/kitty_wallpaper.jpg)] dark:bg-black/50 dark:bg-blend-multiply dark:bg-[url(/chat_wallpaper.jpg)]">
-                <SenderMessageBar />
-                <ReceiverMessageBar />
+            {
+                allMessages.length > 0 && allMessages.map((message, ind) => {
+                    if(ind % 2){
+                        return <ReceiverMessageBar key={ind} {...message} />
+                    }
+                    else {
+                        return <SenderMessageBar key={ind} {...message} />
+                    }
+                })
+            }
             </div>
             <div className="w-full p-3 flex justify-between items-center gap-2">
                 <input 
