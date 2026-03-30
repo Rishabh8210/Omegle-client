@@ -5,5 +5,5 @@ type Props = {
 export default async function Chats( {params}: Props ){
     const { id } = await params;
 
-    return <div>User ID: {id}</div>;
+    return <div className="md:hidden overflow-hidden">User ID: {id}</div>;
 }

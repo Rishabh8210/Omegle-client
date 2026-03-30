@@ -3,7 +3,7 @@ import { HeroSection } from "../components/lobby/HeroSection"
 
 export default function Lobby(){
     return (
-        <div className="overflow-hidden">
+        <div className="md:hidden overflow-hidden">
             <Navbar />
             <HeroSection />
         </div>
