@@ -55,13 +55,13 @@ export function HeroSection() {
             </div>
 
             <div className={` ${londrinaSolid.className} w-full px-5 py-10 flex flex-col justify-between items-center gap-5`}>
-                <div className="h-32 w-full bg-white/30 p-5 flex justify-center items-center text-center font-sans font-semibold text-2xl rounded-2xl">
+                <div className="h-32 w-full bg-black/40 dark:invert p-5 flex justify-center items-center text-center font-sans font-semibold text-2xl rounded-2xl">
                     <h3>Me</h3>
                 </div>
 
                 <p className=" font-semibold text-xl">Matching</p>
 
-                <div className="h-32 w-full bg-white/30 p-5 flex justify-center items-center text-center font-sans font-semibold text-2xl rounded-2xl animate-pulse">
+                <div className="h-32 w-full bg-black/40 dark:invert p-5 flex justify-center items-center text-center font-sans font-semibold text-2xl rounded-2xl animate-pulse">
                     <h3>Anonymous</h3>
                 </div>
 
