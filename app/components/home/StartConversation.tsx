@@ -33,7 +33,7 @@ export function StartConversation(){
                 </button>
 
                 <Link 
-                    href={"/login"}
+                    href={"/signin"}
                     className="p-2 border flex items-center gap-1 justify-center rounded-lg"
                 >
                     Show Identity

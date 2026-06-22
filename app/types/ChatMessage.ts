@@ -1,5 +1,5 @@
 export interface Message {
-    senderId: string
-    receiverId: string
-    message: string
+    user1: number
+    user2: number
+    msg: string
 }

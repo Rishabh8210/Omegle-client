@@ -1,9 +1,10 @@
 "use client"
 
+import { useSocket } from "@/app/hooks/useSocket"
 import { Londrina_Solid, Londrina_Outline } from "next/font/google"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 
 export const LondrinaOutline = Londrina_Outline({
@@ -17,18 +18,47 @@ export const londrinaSolid = Londrina_Solid({
 })
 
 export function HeroSection() {
-
     const router = useRouter()
+    const [chatId, setChatId] = useState('');
+    const socket = useSocket()
 
     useEffect(() => {
+        if(!socket) return;
+        console.log(chatId)
+        socket.emit('match', { type: "text"} )
 
-        const timeoutId = setTimeout(() => {
-            router.push('/chat/1324bfuewfu23')
-        }, 5000)
+        function handleMatchFoundEvent(data: {user1?:number, user2?: number, msg?:string, status?: string}) {
+            if(data && data?.user1 && data?.user2){
+                
+                // console.log(`ChatId - ${data?.user1}-${data?.user2}`);
+                setChatId(`${data?.user1}-${data?.user2}`)
+                router.push(`/chat/${data?.user1}-${data?.user2}`)
+                
+                
+                // router.push(`/chat/${chatId}`)
+            } else if(data && data?.status === "queued"){
+                console.log(data?.msg);
+            }
+        }
 
-        return () => clearTimeout(timeoutId)
+        socket.on('match-found', handleMatchFoundEvent) 
 
-    }, [router])
+        return () => {
+            socket.off('match-found', handleMatchFoundEvent)
+        }
+
+    }, [socket, router, chatId])
+
+
+    // useEffect(() => {
+
+    //     const timeoutId = setTimeout(() => {
+    //         router.push(`/chat/${chatId}`)
+    //     }, 5000)
+
+    //     return () => clearTimeout(timeoutId)
+
+    // }, [router])
 
     return (
         <div className="w-full flex flex-col justify-center items-center p-2 gap-10 py-7">

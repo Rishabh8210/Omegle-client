@@ -16,6 +16,7 @@ export default function SignIn() {
     const router = useRouter()
 
     const BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL;
+    console.log(`Backed url: ${BACKEND}`);
 
     const handleSubmitForm = async (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
